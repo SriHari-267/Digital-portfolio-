@@ -3,89 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sri Hari - Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Rubik', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #020f1e;
+            color: #c7e1ff;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            padding: 60px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-top: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            border: 4px solid #ffffff;
+        }
+        .page {
+            display: none;
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #0b1e3a;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(25, 118, 210, 0.5);
+            text-align: left;
+        }
+        .active {
+            display: block;
+        }
+        h2 {
+            color: #90caf9;
+            margin-bottom: 20px;
+        }
+        p, ul {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        .nav-buttons {
+            margin-top: 20px;
+        }
+        .nav-btn {
+            padding: 12px 20px;
+            background: #64b5f6;
+            color: #020f1e;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .nav-btn:hover {
+            background: #42a5f5;
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-     <center>PORTFOLIO</center>
-    <nav id="navbar">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Header Section -->
-    <header id="header">
-        <div class="container">
-            <h1>Srihari</h1>
-            <p>Web Developer | Designer | Programmer</p>
-            <button id="learn-more">Learn More</button>
-        </div>
+    <header>
+        <img src="IMG-20250331-WA0025.jpg" alt="Sri Hari" class="profile-img">
+        <h1>Sri Hari</h1>
+        <h2>BSc Computer Science</h2>
     </header>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hello! I'm SriHari, a passionate web developer with expertise in building modern, responsive, and user-friendly websites. I specialize in HTML, CSS, JavaScript, and React. I love turning ideas into reality through code.</p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Git & GitHub</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1: Personal Blog</h3>
-                <p>A responsive blog built with HTML, CSS, and JavaScript.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2: E-commerce Website</h3>
-                <p>An e-commerce platform developed using React and Node.js.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Srihari. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    
+    <div class="nav-buttons">
+        <button class="nav-btn" onclick="showPage('about')">About</button>
+        <button class="nav-btn" onclick="showPage('experience')">Experience</button>
+        <button class="nav-btn" onclick="showPage('contact')">Contact</button>
+        <button class="nav-btn" onclick="showPage('resume')">Resume</button>
+    </div>
+    
+    <div id="about" class="page active">
+        <h2>About Me</h2>
+        <p>I'm Sri Hari, a BSc Computer Science student at Thiruthangal Nadar College. I have a strong passion for coding, web development, and problem-solving. I enjoy working on projects that challenge me to learn and grow.</p>
+    </div>
+    
+    <div id="experience" class="page">
+        <h2>Skills & Experience</h2>
+        <ul>
+            <li><strong>Java:</strong> Object-Oriented Programming & Development</li>
+            <li><strong>Python:</strong> Web Automation & AI Basics</li>
+            <li><strong>HTML & CSS:</strong> Web Design & Front-End Development</li>
+            <li><strong>JavaScript:</strong> Enhancing Web Interactivity</li>
+        </ul>
+        <p>I actively participate in coding competitions and debugging challenges to improve my technical skills.</p>
+    </div>
+    
+    <div id="contact" class="page">
+        <h2>Contact Me</h2>
+        <ul>
+            <li><strong>Email:</strong> srihari@example.com</li>
+            <li><strong>LinkedIn:</strong> <a href="#" style="color: #90caf9;">LinkedIn Profile</a></li>
+            <li><strong>GitHub:</strong> <a href="#" style="color: #90caf9;">GitHub Profile</a></li>
+            <li><strong>Phone:</strong> +91 XXXXXXXXXX</li>
+        </ul>
+    </div>
+    
+    <div id="resume" class="page">
+        <h2>Resume</h2>
+        <p>Download my resume below:</p>
+        <a href="srihari-resume.pdf" download class="nav-btn">Download Resume</a>
+    </div>
+    
+    <script>
+        function showPage(pageId) {
+            let pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
+
